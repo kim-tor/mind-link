@@ -7,6 +7,9 @@ function Nav() {
       <a className="navbar-brand" href="/">
         Articles
       </a>
+      <a className="navbar-brand" href="/">
+        Posts
+      </a>
     </nav>
   );
 }

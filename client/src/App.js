@@ -4,13 +4,13 @@ import Nav from "./components/Nav";
 import Input from "./components/Input";
 import Button from "./components/Button";
 import API from "./utils/API";
-import { PostsList, PostsListItem } from "./components/RecipeList";
+import { PostsList, PostsListItem } from "./components/PostsList";
 import { Container, Row, Col } from "./components/Grid";
 
 function App() {
 
-  const [recipes, setRecipes] = useState([]);
-  const [recipeSearch, setRecipeSearch] = useState("");
+  const [posts, setPosts] = useState([]);
+  const [articlesSearch, setarticlesSearch] = useState("");
 
   const handleInputChange = event => {
     // Destructure the name and value properties off of event.target
@@ -20,7 +20,7 @@ function App() {
   };
 
   const handleFormSubmit = event => {
-    // When the form is submitted, prevent its default behavior, get recipes update the recipes state
+    // For the article 
     event.preventDefault();
     API.getRecipes(recipeSearch)
       .then(res => setRecipes(res.data))
@@ -65,7 +65,7 @@ function App() {
               <h1 className="text-center">No Recipes to Display</h1>
             ) : (
               <RecipeList>
-                {recipes.map(recipe => {
+                {posts.map(recipe => {
                   return (
                     <RecipeListItem
                       key={recipe.title}
