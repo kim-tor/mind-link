@@ -5,12 +5,12 @@ import { Container, Row, Col } from "../Grid";
 // Exporting both RecipeList and RecipeListItem from this file
 
 // RecipeList renders a bootstrap list item
-export function RecipeList({ children }) {
+export function ArcticlesList({ children }) {
   return <ul className="list-group">{children}</ul>;
 }
 
 // RecipeListItem renders a bootstrap list item containing data from the recipe api call
-export function RecipeListItem({
+export function ArticlesListItem({
   thumbnail,
   title,
   ingredients,
