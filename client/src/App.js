@@ -16,7 +16,7 @@ function App() {
     // Destructure the name and value properties off of event.target
     // Update the appropriate state
     const { value } = event.target;
-    setRecipeSearch(value);
+    setarticlesSearch(value);
   };
 
   const handleFormSubmit = event => {
@@ -61,22 +61,19 @@ function App() {
         </Row>
         <Row>
           <Col size="xs-12">
-            {!recipes.length ? (
-              <h1 className="text-center">No Recipes to Display</h1>
+            {!posts.length ? (
+              <h1 className="text-center">No Posts to Display</h1>
             ) : (
-              <RecipeList>
-                {posts.map(recipe => {
+              <PostsList>
+                {posts.map(posts => {
                   return (
-                    <RecipeListItem
-                      key={recipe.title}
-                      title={recipe.title}
-                      href={recipe.href}
-                      ingredients={recipe.ingredients}
-                      thumbnail={recipe.thumbnail}
+                    <PostsListItem
+                      title={posts.title}
+                      body={posts.body}
                     />
                   );
                 })}
-              </RecipeList>
+              </PostsList>
             )}
           </Col>
         </Row>

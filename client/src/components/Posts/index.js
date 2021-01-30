@@ -1,6 +1,7 @@
 import React from "react";
 import Thumbnail from "../Thumbnail";
 import { Container, Row, Col } from "../Grid";
+import { posts } from "../../../../routes/apiRoutes";
 
 // Exporting both RecipeList and RecipeListItem from this file
 
@@ -13,8 +14,7 @@ export function PostsList({ children }) {
 export function PostsListItem({
   thumbnail,
   title,
-  ingredients,
-  href
+  body,
 }) {
   return (
     <li className="list-group-item">
@@ -25,9 +25,9 @@ export function PostsListItem({
           </Col>
           <Col size="xs-8 sm-9">
             <h3>{title}</h3>
-            <p>Ingredients: {ingredients}</p>
+             <p>{id}</p>
+            <p>{body}</p>
             <a rel="noreferrer noopener" target="_blank" href={href}>
-              Go to recipe!
             </a>
           </Col>
         </Row>
