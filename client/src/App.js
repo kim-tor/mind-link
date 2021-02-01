@@ -4,23 +4,23 @@ import Nav from "./components/Nav";
 import Input from "./components/Input";
 import Button from "./components/Button";
 import API from "./utils/API";
-import { PostsList, PostsListItem } from "./components/RecipeList";
+import { PostsList, PostsListItem } from "./components/PostsList";
 import { Container, Row, Col } from "./components/Grid";
 
 function App() {
 
-  const [recipes, setRecipes] = useState([]);
-  const [recipeSearch, setRecipeSearch] = useState("");
+  const [posts, setPosts] = useState([]);
+  const [articlesSearch, setarticlesSearch] = useState("");
 
   const handleInputChange = event => {
     // Destructure the name and value properties off of event.target
     // Update the appropriate state
     const { value } = event.target;
-    setRecipeSearch(value);
+    setarticlesSearch(value);
   };
 
   const handleFormSubmit = event => {
-    // When the form is submitted, prevent its default behavior, get recipes update the recipes state
+    // For the article 
     event.preventDefault();
     API.getRecipes(recipeSearch)
       .then(res => setRecipes(res.data))
@@ -61,22 +61,19 @@ function App() {
         </Row>
         <Row>
           <Col size="xs-12">
-            {!recipes.length ? (
-              <h1 className="text-center">No Recipes to Display</h1>
+            {!posts.length ? (
+              <h1 className="text-center">No Posts to Display</h1>
             ) : (
-              <RecipeList>
-                {recipes.map(recipe => {
+              <PostsList>
+                {posts.map(posts => {
                   return (
-                    <RecipeListItem
-                      key={recipe.title}
-                      title={recipe.title}
-                      href={recipe.href}
-                      ingredients={recipe.ingredients}
-                      thumbnail={recipe.thumbnail}
+                    <PostsListItem
+                      title={posts.title}
+                      body={posts.body}
                     />
                   );
                 })}
-              </RecipeList>
+              </PostsList>
             )}
           </Col>
         </Row>
