@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Input from "./components/Input";
 import Button from "./components/Button";
 import API from "./utils/API";
-import { PostsList, PostsListItem } from "./components/PostsList";
+import { PostsList, PostsListItem } from "./components/Posts";
 import { Container, Row, Col } from "./components/Grid";
 
 function App() {
@@ -22,9 +22,9 @@ function App() {
   const handleFormSubmit = event => {
     // For the article 
     event.preventDefault();
-    API.getRecipes(recipeSearch)
-      .then(res => setRecipes(res.data))
-      .catch(err => console.log(err));
+    // API.getRecipes(recipeSearch)
+    //   .then(res => setarticlesSearch(res.data))
+    //   .catch(err => console.log(err));
   };
 
   return (
@@ -40,7 +40,7 @@ function App() {
                   <Col size="xs-9 sm-10">
                     <Input
                       name="RecipeSearch"
-                      value={recipeSearch}
+                      value={articlesSearch}
                       onChange={handleInputChange}
                       placeholder="Search For a Recipe"
                     />
