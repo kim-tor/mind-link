@@ -9,7 +9,8 @@ function About () {
             <Container fluid>
                 <Jumbotron /> 
                 <Row>
-                    <Col>
+                    <Col size = "md-12">
+                        <h1>About</h1>
                     </Col>
                 </Row>
             </Container>

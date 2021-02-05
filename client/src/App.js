@@ -13,11 +13,11 @@ function App() {
     <div>
       <Nav />
       <Wrapper>
-        <Route exact path ="/" component={About} />
+       
         <Route exact path ="/about" component={About} />
         <Route exact path ="/posts" component={Posts} />
         <Route exact path ="/search" component={Search} />
-        
+        <Route exact path ="/" component={About} />
       </Wrapper>
     </div>
     </Router>

@@ -3,33 +3,34 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 
 function Search() {
-    const [articlesSearch, setarticlesSearch] = useState("");
+    // const [articlesSearch, setarticlesSearch] = useState("");
 
-    const handleInputChange = event => {
-        // Destructure the name and value properties off of event.target
-        // Update the appropriate state
-        const { value } = event.target;
-        setarticlesSearch(value);
-    };
+    // const handleInputChange = event => {
+    //     // Destructure the name and value properties off of event.target
+    //     // Update the appropriate state
+    //     const { value } = event.target;
+    //     setarticlesSearch(value);
+    // };
 
-    const handleFormSubmit = event => {
-        // For the article 
-        event.preventDefault();
-        // API.getRecipes(recipeSearch)
-        //   .then(res => setarticlesSearch(res.data))
-        //   .catch(err => console.log(err));
-    };
+    // const handleFormSubmit = event => {
+    //     // For the article 
+    //     event.preventDefault();
+    //     // API.getRecipes(recipeSearch)
+    //     //   .then(res => setarticlesSearch(res.data))
+    //     //   .catch(err => console.log(err));
+    // };
 
     return (
         <div>
             <Container>
                 <Row>
                     <Col size="md-12">
+                        Articles
                         <form>
                             <Container>
                                 <Row>
                                     <Col size="xs-9 sm-10">
-                                        <Input
+                                        {/* <Input
                                             name="articlesSearch"
                                             value={articlesSearch}
                                             onChange={handleInputChange}
@@ -43,7 +44,7 @@ function Search() {
                                             className="input-lg"
                                         >
                                             Search
-                  </Button>
+                  </Button> */}
                                     </Col>
                                 </Row>
                             </Container>
