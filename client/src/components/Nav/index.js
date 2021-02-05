@@ -5,6 +5,9 @@ import "./style.css";
 function Nav() {
   return (
     <nav className="navbar navbar-dark bg-dark">
+      <Link className="navbar-brand" to="/about">
+        About
+      </Link>
       <Link className="navbar-brand" to="/search">
         Articles
       </Link>

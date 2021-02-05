@@ -10,7 +10,8 @@ function About () {
                 <Jumbotron /> 
                 <Row>
                     <Col size = "md-12">
-                        <h1>About</h1>
+                        <h1>Mind-Link</h1>
+                        <Login />
                     </Col>
                 </Row>
             </Container>
