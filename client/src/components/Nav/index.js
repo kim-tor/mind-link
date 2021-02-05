@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function Nav() {
   return (
     <nav className="navbar navbar-dark bg-dark">
-      <a className="navbar-brand" href="/">
+      <Link className="navbar-brand" to="/search">
         Articles
-      </a>
-      <a className="navbar-brand" href="/">
+      </Link>
+      <Link className="navbar-brand" to="/posts">
         Posts
-      </a>
+      </Link>
     </nav>
   );
 }

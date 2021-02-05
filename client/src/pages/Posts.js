@@ -6,7 +6,8 @@ function Posts() {
         <Container>
             <Row>
                 <Col size="xs-12">
-                    {!posts.length ? (
+                <h1 className="text-center">No Posts to Display</h1>
+                    {/* {!posts.length ? (
                         <h1 className="text-center">No Posts to Display</h1>
                     ) : (
                             <PostsList>
@@ -19,7 +20,7 @@ function Posts() {
                                     );
                                 })}
                             </PostsList>
-                        )}
+                        )} */}
                 </Col>
             </Row>
         </Container>
