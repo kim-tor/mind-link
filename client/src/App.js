@@ -1,85 +1,27 @@
-import React, { useState } from "react";
-import Jumbotron from "./components/Jumbotron";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Nav from "./components/Nav";
-import Input from "./components/Input";
-import Button from "./components/Button";
-import API from "./utils/API";
-import { PostsList, PostsListItem } from "./components/Posts";
-import { Container, Row, Col } from "./components/Grid";
+import Wrapper from "./components/Wrapper";
+import About from "./pages/About";
+import Posts from "./pages/Posts";
+import Search from "./pages/Search";
+
 
 function App() {
-
-  const [posts, setPosts] = useState([]);
-  const [articlesSearch, setarticlesSearch] = useState("");
-
-  const handleInputChange = event => {
-    // Destructure the name and value properties off of event.target
-    // Update the appropriate state
-    const { value } = event.target;
-    setarticlesSearch(value);
-  };
-
-  const handleFormSubmit = event => {
-    // For the article 
-    event.preventDefault();
-    // API.getRecipes(recipeSearch)
-    //   .then(res => setarticlesSearch(res.data))
-    //   .catch(err => console.log(err));
-  };
-
-  return (
+  return(
+    <Router>
     <div>
       <Nav />
-      <Jumbotron />
-      <Container>
-        <Row>
-          <Col size="md-12">
-            <form>
-              <Container>
-                <Row>
-                  <Col size="xs-9 sm-10">
-                    <Input
-                      name="RecipeSearch"
-                      value={articlesSearch}
-                      onChange={handleInputChange}
-                      placeholder="Search For a Recipe"
-                    />
-                  </Col>
-                  <Col size="xs-3 sm-2">
-                    <Button
-                      onClick={handleFormSubmit}
-                      type="success"
-                      className="input-lg"
-                    >
-                        Search
-                    </Button>
-                  </Col>
-                </Row>
-              </Container>
-            </form>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="xs-12">
-            {!posts.length ? (
-              <h1 className="text-center">No Posts to Display</h1>
-            ) : (
-              <PostsList>
-                {posts.map(posts => {
-                  return (
-                    <PostsListItem
-                      title={posts.title}
-                      body={posts.body}
-                    />
-                  );
-                })}
-              </PostsList>
-            )}
-          </Col>
-        </Row>
-      </Container>
+      <Wrapper>
+        <Route exact path ="/" component={About} />
+        <Route exact path ="/about" component={About} />
+        <Route exact path ="/posts" component={Posts} />
+        <Route exact path ="/search" component={Search} />
+        
+      </Wrapper>
     </div>
-  );
-}
+    </Router>
+  )
+};
 
 export default App;
