@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Col, Row, Container } from "../Grid";
 
 
-function Signup() {
+function SignUpForm() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
@@ -10,6 +10,8 @@ function Signup() {
     e.preventDefault();
     console.log("username is " + username);
     console.log("password is " + password);
+    window.location.replace("/posts");
+
   };
 
   return (
@@ -54,4 +56,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignUpForm;
