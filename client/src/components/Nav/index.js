@@ -14,6 +14,8 @@ function Nav() {
       <Link className="navbar-brand" to="/posts">
         Posts
       </Link>
+      <Link className="navbar-brand" to="/signup"> Sign Up
+      </Link>
     </nav>
   );
 }

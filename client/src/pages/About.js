@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "../components/Login";
-import SignUp from "../components/SignUp";
+
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 
@@ -12,11 +12,8 @@ function About() {
                 <Row>
                     <Col size="md-8">
                         <Login />
-                     </Col>
-                     <Col size = "md-4">
-                     <SignUp />
-                     </Col>
-        
+                    </Col>
+
                 </Row>
                 <Row>
                     <Col size="md-12">
