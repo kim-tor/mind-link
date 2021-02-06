@@ -5,14 +5,15 @@ import { Container, Row, Col } from "../Grid";
 // Exporting both RecipeList and RecipeListItem from this file
 
 // RecipeList renders a bootstrap list item
-export function PostsList({ children }) {
+export function Posts({ children }) {
   return <ul className="list-group">{children}</ul>;
 }
 
 // RecipeListItem renders a bootstrap list item containing data from the recipe api call
-export function PostsListItem({
+export function Posts({
   thumbnail,
   title,
+  username
   body,
 }) {
   return (
@@ -24,6 +25,7 @@ export function PostsListItem({
           </Col>
           <Col size="xs-8 sm-9">
             <h3>{title}</h3>
+            <h3>{username}</h3>
             <p>{body}</p>
             {/* <a rel="noreferrer noopener" target="_blank" href={href}>
             </a> */}
@@ -33,3 +35,4 @@ export function PostsListItem({
     </li>
   );
 }
+export default Posts;
