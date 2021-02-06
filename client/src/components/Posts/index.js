@@ -13,7 +13,7 @@ export function PostList({ children }) {
 export function PostListItem({
   title,
   username,
-  body,
+  thoughts,
 }) {
   return (
     <li className="list-group-item">
