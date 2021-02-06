@@ -1,4 +1,5 @@
 .jumbotron {
-  min-height: 300px;
+  max-height: 200px;
   padding-top: 100px;
+ 
 }
