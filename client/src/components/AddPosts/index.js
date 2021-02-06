@@ -11,14 +11,14 @@ function AddPosts(props) {
         <input
           value={props.posts}
           onChange={props.handleInputChange}
-          name="users"
+          name="usersname"
           type="text"
           className="form-control"
           placeholder="What is your thoughts?"
           id="posts"
         />
         <datalist id="posts">
-          {props.posts.map(breed => (
+          {props.posts.map(posts => (
             <option value={posts} key={posts} />
           ))}
         </datalist>
