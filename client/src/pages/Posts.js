@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
-import AddPosts from "../components/AddPosts";
-// import Post from ".../components/Posts"
-import API from "../utils/API"
+// import AddPosts from "../components/AddPosts";
+// import PostListItem from ".../components/Posts";
+import API from "../utils/API";
+import { PostList } from "../components/Posts";
 
 class Posts extends Component {
   state = {
@@ -40,10 +41,10 @@ class Posts extends Component {
           <h1 className="text-center">Posts</h1>
           <form>
             <input value={this.state.title} name="title" placeholder="Title" onChange={this.handleInputChange}/>
-            <input value={this.state.username} name="username" placeholder="Username" onChange={this.handleInputChange}/> 
+            {/* <input value={this.state.username} name="username" placeholder="Username" onChange={this.handleInputChange}/>  */}
             <input value={this.state.thoughts} name="thoughts" placeholder="What is on your mind?" onChange={this.handleInputChange}/> 
           </form>
-          <button on Click={this.handleForSubmit} className="btn btn-success" type="submit">
+          <button on Click={this.handleFormSubmit} className="btn btn-success" type="submit">
             Post
           </button>
           {/* <Alert
@@ -52,6 +53,9 @@ class Posts extends Component {
           >
             {this.state.error}
           </Alert> */}
+        </Container>
+        <Container>
+          <PostList/>
         </Container>
       </div>
     );

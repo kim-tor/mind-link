@@ -19,9 +19,9 @@ export function PostListItem({
     <li className="list-group-item">
       <Container>
         <Row>
-          <Col size="xs-4 sm-2">
+          {/* <Col size="xs-4 sm-2">
             <Thumbnail src={thumbnail || "https://placehold.it/300x300"} />
-          </Col>
+          </Col> */}
           <Col size="xs-8 sm-9">
             <h3>{title}</h3>
             <h3>{username}</h3>

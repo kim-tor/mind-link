@@ -3,17 +3,26 @@ module.exports = function(sequelize, DataTypes) {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [1]
-      }
     },
-    body: {
+    thoughts: {
       type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        len: [1]
-      }
     },
+    id: {
+      type: DataTypes.INT,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'users',
+        key: 'id',
+       } 
+      },
+      
     // category: {
     //   type: DataTypes.STRING,
     //   defaultValue: "Personal"
