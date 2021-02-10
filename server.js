@@ -17,7 +17,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-
 // Use apiRoutes
 app.use(apiRoutes);
 app.use(passport.initialize());
