@@ -40,6 +40,7 @@ const passport = require("../config/passport");
     db.Post.create({
       title: req.body.title,
       thoughts: req.body.thoughts,
+      username: req.body.username,
       // category: req.body.category
     })
       .then(function(dbPost) {

@@ -4,7 +4,8 @@ USE sequelize_mind_link;
 
 CREATE TABLE users(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
-    email VARCHAR 100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    username VARCHAR(100) NOT NULL,
     password VARCHAR(61) NOT NULL
 );
 

@@ -8,20 +8,24 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    id: {
-      type: DataTypes.INT,
+    username: {
+      type: DataTypes.STRING,
       allowNull: false,
-      autoIncrement: true,
-      primaryKey: true,
-    },
-    userId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'users',
-        key: 'id',
-       } 
-      },
+    }
+    // id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   autoIncrement: true,
+    //   primaryKey: true,
+    // },
+    // userId: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'users',
+    //     key: 'id',
+    //    } 
+    //   },
       
     // category: {
     //   type: DataTypes.STRING,
