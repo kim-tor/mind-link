@@ -39,7 +39,7 @@ const passport = require("../config/passport");
     console.log(req.body);
     db.Post.create({
       title: req.body.title,
-      body: req.body.body,
+      thoughts: req.body.thoughts,
       // category: req.body.category
     })
       .then(function(dbPost) {
