@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS sequelize_mind_link;
-CREATE DATABASE sequelize_mind_link;
-USE sequelize_mind_link;
+DROP DATABASE IF EXISTS mind_link;
+CREATE DATABASE mind_link;
+USE mind_link;
 
 CREATE TABLE users(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
