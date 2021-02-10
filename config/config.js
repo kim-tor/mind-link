@@ -1,4 +1,4 @@
-{
+moduele.exports ={
   "development": {
     "username": "root",
     "password": null,
