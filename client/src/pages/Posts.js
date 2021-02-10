@@ -25,7 +25,13 @@ class Posts extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    API.getDogsOfBreed(this.state.search)
+    console.log("submited")
+    let thoughts = {
+      title: this.state.title,
+      thoughts: this.state.thoughts,
+      username: this.state.username
+    }
+    API.savePost(thoughts)
       .then(res => {
         if (res.data.status === "error") {
           throw new Error(res.data.message);
@@ -41,10 +47,10 @@ class Posts extends Component {
           <h1 className="text-center">Posts</h1>
           <form>
             <input value={this.state.title} name="title" placeholder="Title" onChange={this.handleInputChange}/>
-            {/* <input value={this.state.username} name="username" placeholder="Username" onChange={this.handleInputChange}/>  */}
+            <input value={this.state.username} name="username" placeholder="Username" onChange={this.handleInputChange}/> 
             <input value={this.state.thoughts} name="thoughts" placeholder="What is on your mind?" onChange={this.handleInputChange}/> 
           </form>
-          <button on Click={this.handleFormSubmit} className="btn btn-success" type="submit">
+          <button onClick={this.handleFormSubmit} className="btn btn-success" type="submit">
             Post
           </button>
           {/* <Alert

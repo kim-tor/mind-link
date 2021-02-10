@@ -5,7 +5,7 @@ const passport = require("./config/passport.js");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-const apiRoutes = require("./routes/apiRoutes");
+const apiRoutes = require("./routes/apiRoutes.js");
 const db = require("./models")
 
 // Define middleware here
@@ -24,7 +24,7 @@ db.sequelize.sync({ force: true }).then(function() {
 });
 
 // Use apiRoutes
-app.use("/api", apiRoutes);
+app.use(apiRoutes);
 app.use(passport.initialize());
 app.use(passport.session());
 
