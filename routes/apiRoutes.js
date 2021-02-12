@@ -23,7 +23,7 @@ const passport = require("../config/passport");
   });
 
   // Get route for retrieving a single post
-  router.get("/api/posts/:id", function(req, res) {
+  router.get("/api/post/:id", function(req, res) {
     db.Post.findOne({
       where: {
         id: req.params.id
@@ -35,7 +35,7 @@ const passport = require("../config/passport");
   });
 
   // POST route for saving a new post
-  router.post("/api/posts", function(req, res) {
+  router.post("/api/post", function(req, res) {
     console.log(req.body);
     console.log(req.body.title);
     db.Post.create({
@@ -50,7 +50,7 @@ const passport = require("../config/passport");
   });
 
   // DELETE route for deleting posts
-  router.delete("/api/posts/:id", function(req, res) {
+  router.delete("/api/post/:id", function(req, res) {
     db.Post.destroy({
       where: {
         id: req.params.id
@@ -62,7 +62,7 @@ const passport = require("../config/passport");
   });
 
   // PUT route for updating posts
-  router.put("/api/posts", function(req, res) {
+  router.put("/api/post", function(req, res) {
     db.Post.update(req.body,
       {
         where: {
