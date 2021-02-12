@@ -3,7 +3,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import Input from "../components/Input";
 import Button from "../components/Button";
-import Link from "react-router";
+
 
 function Search() {
     const [articlesSearch, setarticlesSearch] = useState("");
@@ -51,24 +51,21 @@ function Search() {
                                             className="input-lg"
                                         >
                                             Search
-                  </Button>
+                                        </Button>
                                     </Col>
                                 </Row>
                             </Container>
                         </form>
                     </Col>
                 </Row>
-
-                <Row>{articles.map((article, index) => (
-                    <div key={index}>
-                        <h3>{article.title}</h3>
-                        <p>{article.summary}</p>
-                        <a href={article.link} >{article.link}</a>
-                    </div>
-
-                ))}
-                </Row>
-
+                    {articles.map((article, index) => (
+                        <div className="row mb-3, mt-3" key={index}>
+                            <h3>{article.title}</h3>
+                            <p>{article.summary}</p>
+                            <a href={article.link} >{article.link}</a>
+                        </div>
+                    ))}
+                
             </Container>
         </div>
     );
