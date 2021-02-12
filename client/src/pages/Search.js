@@ -58,14 +58,16 @@ function Search() {
                         </form>
                     </Col>
                 </Row>
-                {articles.map((article, index) => (
+
+                <Row>{articles.map((article, index) => (
                     <div key={index}>
                         <h3>{article.title}</h3>
                         <p>{article.summary}</p>
                         <a href={article.link} >{article.link}</a>
-                        
                     </div>
+
                 ))}
+                </Row>
 
             </Container>
         </div>
