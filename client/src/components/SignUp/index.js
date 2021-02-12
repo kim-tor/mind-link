@@ -43,7 +43,7 @@ function SignUpForm() {
               />
             </Col>
           </Row>
-          <button className="btn btn-success" type="submit">
+          <button onClick={this.handleFormSubmit} className="btn btn-success" type="submit">
             Submit
           </button>
         </Container>
