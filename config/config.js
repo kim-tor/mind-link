@@ -1,4 +1,5 @@
-moduele.exports ={
+
+module.exports ={
   "development": {
     "username": "root",
     "password": process.env.DB_PASS,

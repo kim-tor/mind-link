@@ -37,6 +37,7 @@ const passport = require("../config/passport");
   // POST route for saving a new post
   router.post("/api/post", function(req, res) {
     console.log(req.body);
+    console.log(req.body.title);
     db.Post.create({
       title: req.body.title,
       thoughts: req.body.thoughts,
