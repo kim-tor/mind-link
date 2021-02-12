@@ -51,7 +51,7 @@ const postSeed = [
   },
 ];
 
-db.Posts.remove({})
+db.Post.remove({})
   .then(() => db.Posts.collection.insertMany(postSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");

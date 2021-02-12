@@ -15,3 +15,10 @@ CREATE TABLE posts(
  thoughts TEXT NOT NULL,
  userId INT NOT NULL
 );
+
+CREATE TABLE articles(
+    title VARCHAR(100) NOT NULL,
+    authors VARCHAR(100) NOT NULL,
+    link varchar(max) NOT NULL,
+    description VARCHAR (250) NOT NULL
+);
