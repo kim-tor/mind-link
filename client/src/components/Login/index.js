@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Col, Row, Container } from "../Grid";
+import { useHistory } from 'react-router-dom';
 import "./style.css"
 
 
 function LoginForm() {
-
+  const history = useHistory();
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
@@ -12,7 +13,7 @@ function LoginForm() {
     e.preventDefault();
     console.log("username is " + username);
     console.log("password is " + password);
-    window.location.replace("/posts");
+    history.push('/posts');
 
   };
 
@@ -20,7 +21,7 @@ function LoginForm() {
     e.preventDefault();
     console.log("username is " + username);
     console.log("password is " + password);
-    window.location.replace("/signup");
+    history.push("/signup");
 
   };
 
@@ -53,7 +54,7 @@ function LoginForm() {
               />
             </Col>
           </Row>
-          <button className="btn btn-success" type="submit">
+          <button onClick={this.handleFormSubmit} className="btn btn-success" type="submit">
             Submit
           </button>
           <button className="signupbtn btn-success" type="submit" onClick= {handleSignUp}>Sign Up</button>

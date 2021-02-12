@@ -1,7 +1,7 @@
 moduele.exports ={
   "development": {
     "username": "root",
-    "password": null,
+    "password": process.env.DB_PASS,
     "database": "mind_link",
     "host": "127.0.0.1",
     "dialect": "mysql"
