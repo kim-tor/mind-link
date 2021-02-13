@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const session = require("express-session");
 const path = require("path");
 // const mongoose = require("mongoose");
 const passport = require("./config/passport.js");
@@ -18,9 +19,10 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Use apiRoutes
-app.use(apiRoutes);
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(apiRoutes);
 
 
 // Send every request to the React app
@@ -30,7 +32,7 @@ app.get("*", function(req, res) {
 });
 
 // Connect to the Sequelize
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force: false}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
