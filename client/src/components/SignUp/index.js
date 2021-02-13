@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { Col, Row, Container } from "../Grid";
+import { useHistory } from 'react-router-dom';
 
 
 function SignUpForm() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+  const history = useHistory();
 
   const handleSubmit = e => {
     e.preventDefault();
     console.log("username is " + username);
     console.log("password is " + password);
-    window.location.replace("/posts");
+    history.push('/posts');
 
   };
 
@@ -43,7 +45,7 @@ function SignUpForm() {
               />
             </Col>
           </Row>
-          <button onClick={this.handleFormSubmit} className="btn btn-success" type="submit">
+          <button className="btn btn-success" type="submit">
             Submit
           </button>
         </Container>

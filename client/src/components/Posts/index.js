@@ -9,7 +9,7 @@ export function PostList({ children }) {
   return <ul className="list-group">{children}</ul>;
 }
 
-// RecipeListItem renders a bootstrap list item containing data from the recipe api call
+
 export function PostListItem({
   title,
   username,

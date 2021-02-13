@@ -14,7 +14,6 @@ CREATE TABLE posts(
  title VARCHAR(250) NOT NULL,
  username VARCHAR(100) NOT NULL,
  thoughts TEXT NOT NULL,
- userId INT NOT NULL
 );
 
 CREATE TABLE articles(
