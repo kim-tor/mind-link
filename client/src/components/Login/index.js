@@ -54,7 +54,7 @@ function LoginForm() {
               />
             </Col>
           </Row>
-          <button onClick={this.handleFormSubmit} className="btn btn-success" type="submit">
+          <button className="btn btn-success" type="submit">
             Submit
           </button>
           <button className="signupbtn btn-success" type="submit" onClick= {handleSignUp}>Sign Up</button>
