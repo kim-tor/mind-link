@@ -15,7 +15,7 @@ class Posts extends Component {
   // When the component mounts, get a list of all available past posts
   componentDidMount() {
     API.getPosts()
-      .then(res => this.setState({ posts: res.data.message }))
+      .then(res => this.setState({ posts: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -27,16 +27,7 @@ class Posts extends Component {
           <Row>
             <PostList>
               {this.state.posts.map(post => (
-                <PostListItem>
-                  <Link to={"api/posts/" + post.id}>
-                    <strong>
-                      {post.title} posted by {post.username}
-                    </strong>
-                  </Link>
-                  <Row>
-                    <p>{post.thoughts}</p>
-                  </Row>
-                </PostListItem>
+                <PostListItem {...post}/>
               ))}
             </PostList>
           </Row>

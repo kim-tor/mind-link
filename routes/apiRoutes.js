@@ -3,7 +3,7 @@ const db = require("../models");
 const passport = require("../config/passport");
 
   // GET route for getting all of the posts
-  router.get("/api/posts/", function(req, res) {
+  router.get("/api/post/", function(req, res) {
     db.Post.findAll({})
       .then(function(dbPost) {
         res.json(dbPost);
