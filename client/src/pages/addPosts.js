@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
-// import AddPosts from "../components/AddPosts";
-// import PostListItem from ".../components/Posts";
 import API from "../utils/API";
-// import { PostList, PostListItem } from "../components/Posts";
+import Footer from "../components/Footer";
 
 class addPosts extends Component {
   state = {
@@ -11,13 +9,6 @@ class addPosts extends Component {
     username: "",
     throughts: "",
   };
-
-  // When the component mounts, get a list of all available past posts
-  // componentDidMount() {
-  //   API.getPostList()
-  //     .then(res => this.setState({ post: res.data.message }))
-  //     .catch(err => console.log(err));
-  // }
 
   handleInputChange = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -54,6 +45,7 @@ class addPosts extends Component {
             Post
           </button>
         </Container>
+        <Footer/>
       </div>
     );
   }
