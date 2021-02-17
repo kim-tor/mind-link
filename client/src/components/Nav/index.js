@@ -18,6 +18,9 @@ function Nav() {
       <Link className="navbar-brand" to="/addposts">
         Add Posts
       </Link>
+      <Link className="navbar-brand" to="/">
+        Login
+      </Link>
       <Link className="navbar-brand" to="/signup"> Sign Up
       </Link>
     </nav>

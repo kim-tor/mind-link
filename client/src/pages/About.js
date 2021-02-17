@@ -1,5 +1,4 @@
 import React, {useEffect, useState } from "react";
-import Login from "../components/Login";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
@@ -22,13 +21,7 @@ function About() {
               
                 <Jumbotron quote={quote}/>
                 
-                
-                <Row>
-                    <Col size="md-8">
-                        <Login />
-                    </Col>
-
-                </Row>
+           
                 <Row>
                     <Col size="md-12">
                         <h1 style={{ textAlign: "center" }}>Mind-Link</h1>
