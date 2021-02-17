@@ -23,6 +23,8 @@ function Nav() {
       </Link>
       <Link className="navbar-brand" to="/signup"> Sign Up
       </Link>
+      <Link className="navbar-brand" to="/"> Log Out
+      </Link>
     </nav>
   );
 }
