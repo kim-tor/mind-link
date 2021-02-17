@@ -30,7 +30,7 @@ app.get("*", function(req, res) {
 });
 
 // Connect to the Sequelize
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force:false}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

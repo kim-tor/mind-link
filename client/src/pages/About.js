@@ -1,14 +1,27 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
 import Login from "../components/Login";
-
+import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 
+
 function About() {
+    const [quote, setQuote] = useState ("");
+
+    useEffect(() =>{
+        API.getQuotes()
+        .then(data => setQuote(data));
+
+    }, [] );
+
+
     return (
         <div>
             <Container fluid>
-                <Jumbotron />
+              
+                <Jumbotron quote={quote}/>
+                
+                
                 <Row>
                     <Col size="md-8">
                         <Login />

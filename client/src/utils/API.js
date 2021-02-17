@@ -29,5 +29,25 @@ export default {
     }).catch(function (error) {
       console.error(error);
     });
+  },
+
+getQuotes: function () {
+
+    var options = {
+      method: 'GET',
+      url: 'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote',
+      params: { token: 'ipworld.info' },
+      headers: {
+        'x-rapidapi-key': 'f85bdb7a3cmshd763b26c1883817p1c2c6fjsn1327acd79efb',
+        'x-rapidapi-host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
+      }
+    };
+
+    return axios.request(options).then(function (response) {
+        console.log(response.data);
+        return response.data.text;
+      }).catch(function (error) {
+        console.error(error);
+      });
   }
 };

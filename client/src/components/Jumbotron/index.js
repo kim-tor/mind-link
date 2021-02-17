@@ -1,12 +1,13 @@
 import React from "react";
 import "./style.css";
 
-function Jumbotron() {
+function Jumbotron(props) {
+
   return (
     <div className="jumbotron text-center">
-      <h1>Inspirational Quotes</h1>
-      <a target="_blank" rel="noopener noreferrer" href="http://www.recipepuppy.com/about/api/">
-      </a>
+      <h1>Quote of the Day</h1>
+      {props.quote}
+    
     </div>
   );
 }
