@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Posts from "./pages/Posts";
 import Search from "./pages/Search";
 import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 
 
 function App() {
@@ -14,11 +15,10 @@ function App() {
     <div>
       <Nav />
       <Wrapper>
-       
+        <Route exact path ="/" component={Login} />
         <Route exact path ="/about" component={About} />
         <Route exact path ="/posts" component={Posts} />
         <Route exact path ="/search" component={Search} />
-        <Route exact path ="/" component={About} />
         <Route exact path ="/signup" component={SignUp} />
       </Wrapper>
     </div>
