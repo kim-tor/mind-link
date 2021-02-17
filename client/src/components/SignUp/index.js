@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Col, Row, Container } from "../Grid";
 import { useHistory } from 'react-router-dom';
 
@@ -12,7 +13,12 @@ function SignUpForm() {
     e.preventDefault();
     console.log("username is " + username);
     console.log("password is " + password);
-    history.push('/posts');
+    axios.post("/api/signup", {
+      username,
+      password
+    }).then((res) => {
+      history.push("/posts")
+    })
 
   };
 

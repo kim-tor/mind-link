@@ -1,21 +1,18 @@
-import React, { Component, useState } from "react";
-import { Col, Row, Container } from "../components/Grid";
-// import AddPosts from "../components/AddPosts";
-// import PostListItem from ".../components/Posts";
+import React, { Component } from "react";
+import { Row, Container } from "../components/Grid";
 import API from "../utils/API";
-import { PostList, PostListItem } from "../components/Posts";
-// import addPosts from "./addPosts";
-import { Link } from "react-router-dom";
+import PostListItem from "../components/Posts";
+import Footer from "../components/Footer";
+
 
 class Posts extends Component {
   state = {
     posts: []
   };
 
-  // When the component mounts, get a list of all available past posts
   componentDidMount() {
     API.getPosts()
-      .then(res => this.setState({ posts: res.data.message }))
+      .then(res => this.setState({ posts: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -25,22 +22,14 @@ class Posts extends Component {
         <Container style={{ minHeight: "80%" }}>
           <h1 className="text-center">Posts</h1>
           <Row>
-            <PostList>
+            <ul className="list-group">
               {this.state.posts.map(post => (
-                <PostListItem>
-                  <Link to={"api/posts/" + post.id}>
-                    <strong>
-                      {post.title} posted by {post.username}
-                    </strong>
-                  </Link>
-                  <Row>
-                    <p>{post.thoughts}</p>
-                  </Row>
-                </PostListItem>
+                <PostListItem {...post}/>
               ))}
-            </PostList>
+            </ul>
           </Row>
         </Container>
+        <Footer/>
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React, {useEffect, useState } from "react";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
+import Footer from "../components/Footer";
 
 
 function About() {
@@ -34,6 +35,7 @@ Proin accumsan elementum ex aliquam posuere. Proin posuere euismod accumsan. Int
 
                 </Row>
             </Container>
+            <Footer/>
         </div>
     )
 }

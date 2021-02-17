@@ -3,6 +3,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import Input from "../components/Input";
 import Button from "../components/Button";
+import Footer from "../components/Footer";
 
 
 function Search() {
@@ -67,6 +68,7 @@ function Search() {
                     ))}
                 
             </Container>
+            <Footer/>
         </div>
     );
 }
