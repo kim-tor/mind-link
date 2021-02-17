@@ -5,18 +5,14 @@ const db = require("../models");
 
 // Telling passport we want to use a Local Strategy. In other words, we want login with a username/username and password
 passport.use(
-  new LocalStrategy(
-    // Our user will sign in using an username, rather than a "username"
-    {
-      usernameField: "username"
-    },
-    (username, password, done) => {
+  new LocalStrategy((username, password, done) => {
       // When a user tries to sign in this code runs
       db.User.findOne({
         where: {
           username: username
         }
       }).then(dbUser => {
+        console.log(dbUser);
         // If there's no user with the given username
         if (!dbUser) {
           return done(null, false, {
@@ -35,6 +31,7 @@ passport.use(
     }
   )
 );
+
 
 // In order to help keep authentication state across HTTP requests,
 // Sequelize needs to serialize and deserialize the user

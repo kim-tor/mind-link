@@ -12,16 +12,17 @@ function LoginForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // axios.post("/api/login", {username, password})
-    // .then(response => {
-    //   console.log(response);
-    // })
-    // .catch(err => {
-    //   console.log(err);
-    // })
+    axios.post("/api/login", {username, password})
+    .then(response => {
+      console.log(response);
+      history.push('/posts');
+    })
+    .catch(err => {
+      console.log(err);
+    })
     console.log("username is " + username);
     console.log("password is " + password);
-    // history.push('/posts');
+    
 
   };
 
