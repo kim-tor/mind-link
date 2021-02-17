@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Col, Row, Container } from "../Grid";
 import { useHistory } from 'react-router-dom';
 import "./style.css"
+import axios from "axios";
 
 
 function LoginForm() {
@@ -11,17 +12,16 @@ function LoginForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    // axios.post("/api/login", {username, password})
+    // .then(response => {
+    //   console.log(response);
+    // })
+    // .catch(err => {
+    //   console.log(err);
+    // })
     console.log("username is " + username);
     console.log("password is " + password);
-    history.push('/posts');
-
-  };
-
-  const handleSignUp = e => {
-    e.preventDefault();
-    console.log("username is " + username);
-    console.log("password is " + password);
-    history.push("/signup");
+    // history.push('/posts');
 
   };
 
@@ -57,7 +57,7 @@ function LoginForm() {
           <button className="btn btn-success" type="submit">
             Submit
           </button>
-          <button className="signupbtn btn-success" type="submit" onClick= {handleSignUp}>Sign Up</button>
+        
         </Container>
         </form>
     </div>
