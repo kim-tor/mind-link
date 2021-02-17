@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../components/Grid";
+import { Container } from "../components/Grid";
 import API from "../utils/API";
 import Footer from "../components/Footer";
+import { withRouter } from "react-router-dom";
 
 class addPosts extends Component {
   state = {
@@ -28,27 +29,30 @@ class addPosts extends Component {
           throw new Error(res.data.message);
         }
         this.setState({ results: res.data.message, error: "" });
+        this.props.history.push("/posts")
       })
       .catch(err => this.setState({ error: err.message }));
   };
   render() {
     return (
       <div>
-        <Container style={{ minHeight: "80%" }}>
-          <h1 className="text-center">Add your Posts</h1>
+        <Container style={{ minHeight: "100%" }}>
+          <h1 className="text-center">What is on your mind?</h1>
           <form>
-            <input value={this.state.title} name="title" placeholder="Title" onChange={this.handleInputChange} />
-            <input value={this.state.username} name="username" placeholder="Username" onChange={this.handleInputChange} />
-            <input value={this.state.thoughts} name="thoughts" placeholder="What is on your mind?" onChange={this.handleInputChange} />
+            <div className="mb-3">
+              <input className ="form-control" value={this.state.title} name="title" placeholder="Title" onChange={this.handleInputChange} />
+              <input className ="form-control" value={this.state.username} name="username" placeholder="Username" onChange={this.handleInputChange} />
+              <input className ="form-control" value={this.state.thoughts} name="thoughts" placeholder="Your Thoughts" onChange={this.handleInputChange} />
+            </div>
           </form>
           <button onClick={this.handleFormSubmit} className="btn btn-success" type="submit">
             Post
           </button>
         </Container>
-        <Footer/>
+        <Footer />
       </div>
     );
   }
 }
 
-export default addPosts;
+export default withRouter(addPosts);

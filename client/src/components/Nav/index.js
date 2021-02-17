@@ -4,7 +4,7 @@ import "./style.css";
 
 function Nav() {
   return (
-    <nav className="navbar fixed-top navbar-dark bg-dark">
+    <nav className="navbar navbar-dark bg-dark">
        <h2>Mind-Link</h2>
       <Link className="navbar-brand" to="/about">
         About
