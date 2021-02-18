@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "../Grid";
 import Confetti from 'react-confetti';
+import "./style.css";
 
 class PostListItem extends Component {
   constructor(params) {
@@ -37,10 +38,10 @@ class PostListItem extends Component {
       <li className="list-group-item">
         <Container>
           <Row>
-            <Col size="xs-18 sm-20">
-              <h3>{this.props.title}</h3>
-              <p> by {this.props.username}</p>
-              <p>{this.props.thoughts}</p>
+            <Col size="100">
+              <h3>Title: {this.props.title}</h3>
+              <h4> Username: {this.props.username}</h4>
+              <p>My thoughts: {this.props.thoughts}</p>
               <button className="btn" onClick={this.encourage}>Encouragement</button>
               {confetti}
             </Col>
