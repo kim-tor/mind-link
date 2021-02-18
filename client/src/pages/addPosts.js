@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container } from "../components/Grid";
 import API from "../utils/API";
 import Footer from "../components/Footer";
+import Image from "../components/Image";
 import { withRouter } from "react-router-dom";
 
 class addPosts extends Component {
@@ -36,6 +37,7 @@ class addPosts extends Component {
   render() {
     return (
       <div>
+        <Image/>
         <Container style={{ minHeight: "100%" }}>
           <h1 className="text-center">What is on your mind?</h1>
           <form>

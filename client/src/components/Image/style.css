@@ -1,0 +1,10 @@
+.image {
+    max-height: 100px;
+    padding-top: 100px;
+    background-image: url("../../utils/images/option3.jpg");
+    background-size:cover;
+    height: 200px;
+    width: auto;
+    background-position: left;
+  }
+  

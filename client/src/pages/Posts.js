@@ -3,6 +3,7 @@ import { Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import PostListItem from "../components/Posts";
 import Footer from "../components/Footer";
+import Image from "../components/Image";
 
 
 class Posts extends Component {
@@ -18,8 +19,9 @@ class Posts extends Component {
 
   render() {
     return (
-      <div className="container mb-5 mt-5">
-        <Container style={{ minHeight: "80%" }}>
+      <div>
+        <Image/>
+        <Container style={{ minHeight: "100%" }}>
           <h1 className="text-center">Posts</h1>
           <Row>
             <ul className="list-group">
