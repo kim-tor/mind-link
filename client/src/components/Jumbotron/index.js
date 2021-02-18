@@ -6,7 +6,7 @@ function Jumbotron(props) {
   return (
     <div className="jumbotron text-center">
       <h1>Quote of the Day</h1>
-      {props.quote}
+      <p className="quote"> {props.quote}</p>
     
     </div>
   );

@@ -26,7 +26,11 @@ function About() {
                     <Col size="md-12">
                         <h1 style={{ textAlign: "center" }}>Mind-Link</h1>
 
-                        <p>People can connect with a support form with sharing their daily experience with their well being. There should resources readily available to them.</p>
+                        <p style={{ textAlign: "center", padding: "25px" }}> Welcome to a place where it is okay to NOT be okay. <br /> <br />
+                         You can connect with a support form by sharing daily experiences and the way they have impacted you. <br /> <br />
+                         Check out other people's posts if you need a little encouragement to share your own. <br /> <br />
+                         Remember we are all human, our mind are another part of us that needs to be taken care of <br /> <br />
+                         Please refer to our Helpful Resources for additional support.</p>
                     </Col>
 
                 </Row>

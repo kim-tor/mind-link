@@ -4,6 +4,7 @@ import { Col, Row, Container } from "../components/Grid";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
+import Image from "../components/Image";
 
 
 function Search() {
@@ -30,6 +31,7 @@ function Search() {
 
     return (
         <div>
+            <Image />
             <Container>
                 <Row>
                     <Col size="md-12">
