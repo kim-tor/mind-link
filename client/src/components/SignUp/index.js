@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Col, Row, Container } from "../Grid";
 import { useHistory } from 'react-router-dom';
-
+import "./style.css"
 
 function SignUpForm() {
   const [username, setUsername] = useState();
@@ -24,7 +24,7 @@ function SignUpForm() {
 
   return (
     <div>
-      <div className="mt-4">
+      <div className="signup">
         <h2>Sign Up</h2>
       </div>
       <form onSubmit={handleSubmit}>
