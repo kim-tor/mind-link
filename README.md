@@ -10,7 +10,7 @@ Deployed Link: https://mind-link.herokuapp.com/
 * [License](#License)
 
 ## Description
-An web application that allows you to connect and find support 
+An web application that allows you to connect and find support and find resources for mental health
 
 ## Installation
 
