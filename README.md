@@ -1,5 +1,7 @@
 # mind-link
 
+Deployed Link: https://mind-link.herokuapp.com/
+
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -16,13 +18,14 @@ An web application that allows you to connect and find support
 * Run npm start
 
 ## Usage
-*
-* 
-* 
+* ![UsageGIF](client\src\utils\images\Mind-Link.gif)
+* ![About](client\src\utils\images\about.JPG)
+* ![Posts](client\src\utils\images\posts.JPG)
+* ![Articles](client\src\utils\images\articles.JPG)
 
 ## Credits
-Kimberley's Github: https://github.com/kim-tor
-Anna's Github: https://github.com/AnnaChira
+* Kimberley's Github: https://github.com/kim-tor
+* Anna's Github: https://github.com/AnnaChira
 
 ## License
 MIT License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
