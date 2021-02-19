@@ -18,7 +18,7 @@ An web application that allows you to connect and find support and find resource
 * Run npm start
 
 ## Usage
-* ![UsageGIF](./client/src/utils/images/Mind-Link.GIF)
+* ![UsageGIF](./client/src/utils/images/Mind-Link.gif)
 * ![About](./client/src/utils/images/about.JPG)
 * ![Posts](./client/src/utils/images/posts.JPG)
 * ![Articles](./client/src/utils/images/articles.JPG)
